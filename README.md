@@ -18,14 +18,17 @@ Goal
 
 To optionally squash changes before making a PR refer to https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git
 
-```bash
-git reset --soft HEAD~3 &&
-git commit
-```
+`git reset --soft HEAD~3 && git commit`
 
 ## Creating a new release
 
-todo
+Creating a new release/tag using bash:
+```bash
+git tag -a v1.5 -m "Version 1.5"
+git push origin v1.5
+```
+
+To delete a tag: `git tag -d v1.5`
 
 ## Working on a major change
 
