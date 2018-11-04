@@ -6,7 +6,7 @@ namespace BranchingApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! version 1.1");
+            Console.WriteLine("Hello World! version 1.2")
         }
     }
 }
