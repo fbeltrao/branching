@@ -32,6 +32,45 @@ To delete a release: `hub release delete v1.5`\
 To delete a tag locally: `git tag -d v1.5`\
 To delete a remote tag: `git push --delete origin v1.5`
 
+## Fix bug in a release
+
+1. Create new branch (if not existent)
+
+```bash
+# create and set branch
+git checkout -b release/v1.5 v1.5
+
+# push remote
+git push --set-upstream origin release/v1.5
+```
+
+2. Make changes and PR to it release/v1.5
+
+```bash
+# create and set branch
+git checkout -b features/fix-for-v1.5.1
+
+# commit changes
+git commit -a -m "Fix error in v1.5.1"
+
+# push to origin
+git push --set-upstream origin features/fix-for-v1.5.1
+
+# create PR in GitHub web site
+
+```
+
+3. Make a new release => v1.5.1
+
+```bash
+# create release v1.5.1 from branch release/v1.5
+hub release create -m "v1.5.1" -t release/v1.5 v1.5.1
+```
+
+4. Fix $master too through PR or cherry-pick
+
+TODO
+
 ## Working on a major change
 
 todo
