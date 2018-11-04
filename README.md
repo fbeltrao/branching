@@ -69,6 +69,28 @@ hub release create -m "v1.5.1" -t release/v1.5 v1.5.1
 
 4. Fix $master too through PR or cherry-pick
 
+4.1 Pull request
+
+Do the pull request from bug fix branch to $master
+
+4.2 Merging
+
+```bash
+# create branch to merge fix
+git checkout -b feature/bug-fix-branch-to-master
+
+# merge from bug fix branch
+git merge feature/bug-fix-branch
+
+# commit merge
+git commit -a -m "Fix xxx"
+
+# push change and make PR on GH
+git push --set-upstream origin feature/bug-fix-branch-to-master
+
+
+```
+
 TODO
 
 ## Working on a major change
