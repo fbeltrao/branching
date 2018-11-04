@@ -22,13 +22,15 @@ To optionally squash changes before making a PR refer to https://stackoverflow.c
 
 ## Creating a new release
 
-Creating a new release/tag using bash:
+To create a release using bash we need to install [hub](https://github.com/github/hub#installation).
+
 ```bash
-git tag -a v1.5 -m "Version 1.5"
-git push origin v1.5
+hub release create -m "v1.5" v1.5
 ```
 
-To delete a tag: `git tag -d v1.5`
+To delete a release: `hub release delete v1.5`\
+To delete a tag locally: `git tag -d v1.5`\
+To delete a remote tag: `git push --delete origin v1.5`
 
 ## Working on a major change
 
