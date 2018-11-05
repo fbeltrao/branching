@@ -91,8 +91,14 @@ git push --set-upstream origin feature/bug-fix-branch-to-master
 
 ```
 
-TODO
-
 ## Working on a major change
 
-todo
+Scenario where 2 or more branches are created to make a major change. All should derive work from a common branch that is ahead of $master.
+
+Proposed solution is:
+```text
+-> use $dev
+  -> create $feature/dev-feature-a, $feature/dev-feature-b
+  -> merge back to $dev
+-> PR $dev changes to $master
+```
